@@ -132,7 +132,12 @@ void UsbInit(void)
   ASSERT_RT((fifoPipeBulkIN.handle  != FIFO_ERR_INVALID_HANDLE) && \
             (fifoPipeBulkOUT.handle != FIFO_ERR_INVALID_HANDLE));
   /* initialize the USB device libary */
+#if  defined(STM32H7B3xxQ)
+  USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_HS);
+#else
+
   USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS);
+#endif
   /* register the bootloader's custom USB Bulk based class */
   USBD_RegisterClass(&hUsbDeviceFS, &USBD_Bulk);
   /* inform application about the connect event */

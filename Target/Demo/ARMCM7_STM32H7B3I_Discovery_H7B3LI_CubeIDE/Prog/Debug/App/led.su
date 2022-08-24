@@ -1,0 +1,2 @@
+../App/led.c:50:6:LedInit	8	static
+../App/led.c:64:6:LedToggle	8	static

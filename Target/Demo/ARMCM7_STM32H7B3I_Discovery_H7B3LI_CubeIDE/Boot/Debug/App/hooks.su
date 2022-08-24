@@ -1,0 +1,6 @@
+../App/hooks.c:52:10:CpuUserProgramStartHook	8	static
+../App/hooks.c:85:6:CopInitHook	0	static
+../App/hooks.c:102:6:CopServiceHook	0	static
+../App/hooks.c:126:6:UsbConnectHook	0	static
+../App/hooks.c:138:6:UsbEnterLowPowerModeHook	0	static
+../App/hooks.c:150:6:UsbLeaveLowPowerModeHook	0	static
